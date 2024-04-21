@@ -1,7 +1,9 @@
-pandas 
-scikit-learn
-seaborn
-xgboost	
-streamlit
-tsfresh
-sktime
+pandas==2.2.2
+scikit-learn==1.4.2
+seaborn==0.13.2
+xgboost==2.0.3
+#streamlit=
+tsfresh==0.20.2
+#sktime
+fastapi==0.110.2
+uvicorn==0.29.0

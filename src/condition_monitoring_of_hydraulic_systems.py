@@ -56,6 +56,10 @@ def main():
         logging.info("TSFRESH files run successfully.")
     # training of the model
     pipeline, xgb_feature_names = model_pipeline_trained(X_train_test_tsf, y_train_test)
+    # Convert the list to a DataFrame
+    df_features = pd.DataFrame(xgb_feature_names, columns=['Feature'])
+    # Save the DataFrame to a CSV file
+    df_features.to_csv('./data/model_features.csv', index=False)
     # Save the trained model as a joblib file
     joblib.dump(pipeline, model_path)
     # evaluation on test set
